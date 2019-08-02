@@ -52,6 +52,10 @@ def main():
       if event.type == pygame.QUIT:
         pygame.quit()
         quit()
+      elif event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_RETURN and pygame.key.get_mods() & pygame.KMOD_ALT:
+          pygame.display.toggle_fullscreen()
+
     glRotatef(1, 3, 1, 1)
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
     Cube()
